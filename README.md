@@ -2,6 +2,12 @@
 biometric rest backend in Golang
 
 # DevOps
+## Running the docker container webserver
+See https://github.com/ObrienlabsDev/biometric-backend-go/blob/main/src/docker/build.sh#L72
+```
+docker run -d -p 8888:8080 --name $CONTAINER_IMAGE obrienlabs/$CONTAINER_IMAGE:$TAG
+curl -X GET "http://127.0.0.1:8888" -H "accept: */*"
+```
 ## Upgrade OSX go
 Download latest (1.22.5) - https://go.dev/dl/
 
